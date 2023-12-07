@@ -10,7 +10,7 @@ export class MainPageComponent {
     
     public character: Charactere[] = [{
         name: 'Krilin',
-        power: 900
+        power: 2500
     },{
         name: 'goku',
         power: 9000

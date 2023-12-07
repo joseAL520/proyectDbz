@@ -2,9 +2,14 @@
 
    <ul class="list-group">
 
-      <li *ngFor="let item of  characterList; let i = index" 
-      class=" list-group-item"  
-      [ngClass]="{ 'list-group-item list-group-item-success': item.power > 5000}">
+      <li *ngFor="let item of  characterList; 
+                  let i = index;
+                  let isLast = last;
+                  let iseven = even;"
+                   
+      [class]=" 'list-group-item' "  
+      [ngClass]="{ 'list-group-item-success': iseven ,
+                   'list-group-item-warning':isLast}">
 
          <span class="text-primary"> {{i + 1}}. </span>
 

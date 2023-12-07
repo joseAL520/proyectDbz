@@ -12,7 +12,10 @@ export class MainPageComponent {
         name: 'Krilin',
         power: 2500
     },{
-        name: 'goku',
-        power: 9000
+        name: 'vegeta',
+        power: 7500
+    },{
+        name: 'aaaaa',
+        power: 7500
     }]
 }

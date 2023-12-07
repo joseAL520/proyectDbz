@@ -18,4 +18,8 @@ export class MainPageComponent {
         name: 'aaaaa',
         power: 7500
     }]
+
+    onNewCharacter( characer: Charactere):void{
+        console.warn(characer)
+    }
 }

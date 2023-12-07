@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Charactere } from '../../interfaces/character.interface';
 
 @Component({
@@ -7,7 +7,10 @@ import { Charactere } from '../../interfaces/character.interface';
   styleUrls: ['./add-character.component.css']
 })
 export class AddCharacterComponent {
-  
+
+  @Output()
+  public onNewCharacter: EventEmitter<Charactere> = new EventEmitter();
+
   public character: Charactere = {
     name: '',
     power: 0,
@@ -15,12 +18,12 @@ export class AddCharacterComponent {
 
   addPersonDbz(){
 
-    if(this.character.name != '' && this.character.power != 0){
+    if(this.character.name.length != 0){
       console.log(this.character)
+      this.onNewCharacter.emit(this.character);
     }else{
       alert('Debe llenar los campos');
     }
-    this.character.name = ''
-    this.character.power = 0
+    this.character ={name: '', power:0};
   }
 }

@@ -20,6 +20,10 @@ export class MainPageComponent {
     }]
 
     onNewCharacter( characer: Charactere):void{
-        console.warn(characer)
+       this.character.push(characer);
+    }
+
+    onDeleteCharacter(index:number){
+        this.character.splice(index,1);
     }
 }

@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col">
-        <app-dbz-compoents-list [characterList]="character"></app-dbz-compoents-list>
+        <app-dbz-compoents-list [characterList]="character" (oneDelet)="onDeleteCharacter($event)"></app-dbz-compoents-list>
     </div>
 
     <div class="col">

@@ -10,10 +10,17 @@ export class AddCharacterComponent {
   
   public character: Charactere = {
     name: '',
-    power: 0
+    power: 0,
   };
 
   addPersonDbz(){
-    console.log(this.character)
+
+    if(this.character.name != '' && this.character.power != 0){
+      console.log(this.character)
+    }else{
+      alert('Debe llenar los campos');
+    }
+    this.character.name = ''
+    this.character.power = 0
   }
 }

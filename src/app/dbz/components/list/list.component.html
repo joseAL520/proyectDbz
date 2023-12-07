@@ -1,5 +1,9 @@
 <h4>personajes</h4>
    <ul class="list-group">
-      <li class=" list-group-item">goki - 1000</li>
-      <li class=" list-group-item">krili - 900</li>
+      <li *ngFor="let item of  characterList; let i = index   " class=" list-group-item">
+         <span class="tex-primay"> {{i + 1}} </span>
+         <span>{{item.name}}</span> - 
+         <strong>Poder: </strong>
+         <span>{{item.power}}</span></li>
+      
    </ul>

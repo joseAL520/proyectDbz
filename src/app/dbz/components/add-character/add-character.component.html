@@ -1,6 +1,6 @@
   <h4>agregar personajes</h4>
     <form action="" class="row">
-        <input type="text"   class="form-control mb-2" placeholder="nombre">
-        <input type="number" class="form-control mb-2" placeholder="poder">
+        <input type="text"   [(ngModel)]="character.name"  name="name" class="form-control mb-2" placeholder="nombre">
+        <input type="number" [(ngModel)]="character.power" name="powe" class="form-control mb-2" placeholder="poder">
     </form>
-    <button type="submit" class="btn btn-primary">agregar </button>
+    <button type="submit" class="btn btn-primary" (click)="addPersonDbz()">agregar </button>

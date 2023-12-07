@@ -26,6 +26,7 @@ export class DbzService {
                 power: character.power
         }
        this.character.push(newCharacter);
+       console.log(newCharacter);
     }
 
     // onDeleteCharacter(index:number){
@@ -34,7 +35,7 @@ export class DbzService {
 
     onDeleteCharacterById(id:string){
         this.character = this.character.filter( character => character.id !== id);
-        
+
     }
     
 }

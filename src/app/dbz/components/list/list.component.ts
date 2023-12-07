@@ -13,12 +13,13 @@ export class ListComponent {
 
   @Output()
   public oneDelet: EventEmitter<string> = new EventEmitter();
-character: any;
 
 
-  onDeletCharacter(id:string):void{
+  onDeletCharacter(id?:string):void{
     console.log(id)
+    if(id?.length === 0){
       this.oneDelet.emit(id);
+    }
   }
 
 }
